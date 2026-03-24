@@ -1,11 +1,15 @@
-package main.letsgo.chap12.ex1_baisc;
+package main.letsgo.chap12.ex1_basic;
+
+import main.letsgo.chap12.ex2_extends.Plastic;
+import main.letsgo.chap12.ex2_extends.Powder;
 
 public class GenericPrinterTest {
     public static void main(String[] args) {
         //플라스틱
         GenericPrinter<Plastic> plasticPrinter = new GenericPrinter<>();
         Plastic plastic = new Plastic();
-        plasticPrinter.setMaterial(plastic);
+        GenericPrinter<Plastic> PlasticPrinter = null;
+        PlasticPrinter.setMaterial(plastic);
         Plastic returnedPlastic = plasticPrinter.getMaterial();
         returnedPlastic.doPrinting();
         System.out.println(plasticPrinter);
